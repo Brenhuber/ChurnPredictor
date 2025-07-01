@@ -56,7 +56,7 @@ df = pd.get_dummies(df)
 st.sidebar.title("Customer Details")
 customer = {
     "gender": st.sidebar.selectbox("Gender", ["Male", "Female"]),
-    "SeniorCitizen": st.sidebar.selectbox("Senior Citizen?", [0, 1]),
+    "SeniorCitizen": st.sidebar.selectbox("Senior Citizen?", ["Yes", "No"]),
     "Partner": st.sidebar.selectbox("Partner", ["Yes", "No"]),
     "Dependents": st.sidebar.selectbox("Dependents", ["Yes", "No"]),
     "tenure": st.sidebar.slider("Tenure (months)", 0, 72, 12),
