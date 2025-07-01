@@ -22,12 +22,7 @@
 
 ### 🛠️ Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)  
-![pandas](https://img.shields.io/badge/pandas-Data%20Handling-purple?logo=pandas)  
-![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)  
-![Streamlit](https://img.shields.io/badge/Streamlit-UI-red?logo=streamlit)  
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-blue?logo=scikit-learn)  
-![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-orange?logo=plotly)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python) ![pandas](https://img.shields.io/badge/pandas-Data%20Handling-purple?logo=pandas) ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy) ![Streamlit](https://img.shields.io/badge/Streamlit-UI-red?logo=streamlit) ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-blue?logo=scikit-learn) ![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-orange?logo=plotly)
 
 ---
 
