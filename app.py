@@ -6,7 +6,6 @@ import plotly.graph_objects as go
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
 # -------------------- Streamlit App Appearance --------------------
@@ -83,7 +82,6 @@ customer = {
 models = {
     "Logistic Regression (Preferred Model)": LogisticRegression(random_state=42, max_iter=10000),
     "Random Forest": RandomForestClassifier(random_state=42, n_estimators=100),
-    "Decision Tree": DecisionTreeClassifier(random_state=42, max_depth=9),
     "Gradient Boosting": GradientBoostingClassifier(random_state=42, n_estimators=100),
 }
 
@@ -136,7 +134,7 @@ if st.sidebar.button("Predict"):
     st.subheader("Feature Importance")
     if fi is not None and not fi.empty:
         fig = px.bar(x=fi.values, y=fi.index, orientation='h', labels={'x': 'Importance', 'y': 'Feature'})
-        fig.update_layout(title="Feature Importance", xaxis_title="Importance", yaxis_title="Feature")
+        fig.update_layout(title="", xaxis_title="Importance", yaxis_title="Feature")
         fig.update_traces(marker_color='#52796f')
         st.plotly_chart(fig, use_container_width=True)
 else:
