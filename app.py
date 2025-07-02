@@ -16,7 +16,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
 st.markdown("""
     <style>
     .stApp {
@@ -48,6 +47,7 @@ df = df.drop('customerID', axis=1)
 df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors='coerce')
 df = df.dropna()
 df['Churn'] = df['Churn'].map({'Yes': 1, 'No': 0})
+# Converts categorical variables into dummy/indicator variables
 df = pd.get_dummies(df)
 
 # -------------------- Sidebar --------------------
@@ -96,12 +96,15 @@ def predict(customer_dict, df, model):
     y = df["Churn"]
     X = X.reindex(columns=X.columns, fill_value=0)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    # Train the model
     model.fit(X_train, y_train)
     acc = accuracy_score(y_test, model.predict(X_test))
     proba = model.predict_proba(single[X_train.columns])[0][1]
 
+    # Feature importance
     if hasattr(model, "feature_importances_"):
         fi = pd.Series(model.feature_importances_, index=X_train.columns)
+    # Coefficient-based for Logistic Regression
     elif hasattr(model, "coef_"):
         fi = pd.Series(np.abs(model.coef_[0]), index=X_train.columns)
     else:
@@ -120,6 +123,7 @@ if st.sidebar.button("Predict"):
     col1, col2 = st.columns(2)
     col1.metric("Model Accuracy", f"{accuracy*100:.2f}%")
     col2.metric("Churn Probability", f"{churn_proba*100:.1f}%")
+    # Result
     if churn_proba > 0.5:
         st.error("⚠️ Customer is likely to churn.")
     else:
