@@ -49,7 +49,7 @@
 ### 🧭 Usage
 
 - Fill in customer details in the sidebar.
-- Choose a model (Logistic Regression, Random Forest, Decision Tree, Gradient Boosting).
+- Choose a model (Logistic Regression, Random Forest, Gradient Boosting).
 - Click Predict to view accuracy, churn probability gauge, and feature importance.
 
 ---
