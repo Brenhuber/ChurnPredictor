@@ -5,14 +5,14 @@
 
 ### 🚀 Overview
 
-**Modern Churn Predictor** is a Streamlit-based app that predicts telco customer churn. It offers multiple models (Logistic Regression, Random Forest, Decision Tree, Gradient Boosting), displays prediction probability with a gauge chart, and surfaces top feature importances.
+**Modern Churn Predictor** is a Streamlit-based app that predicts telco customer churn. It offers multiple models (Logistic Regression, Random Forest, Gradient Boosting), displays prediction probability with a gauge chart, and surfaces top feature importances.
 
 ---
 
 ### ✨ Features
 
 - Input customer profile via sidebar widgets  
-- Select from four ML models with a single click  
+- Select from three ML models with a single click  
 - Display model accuracy and churn probability  
 - Interactive gauge chart for churn likelihood  
 - Top-10 feature importance bar chart  
